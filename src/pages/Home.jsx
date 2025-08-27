@@ -132,7 +132,7 @@ const Home = () => {
                     </div>
                 </div>
 
-                <div className="relative z-10 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+                <div className="relative z-10 max-w-7xl mt-10 lg:mt-0 mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
                     {/* Left Image */}
                     <div
                         id="hero-image"
@@ -172,7 +172,7 @@ const Home = () => {
                                 : 'opacity-0 translate-x-10'
                             }`}
                     >
-                        <div className="bg-white/10 backdrop-blur-lg p-8 rounded-3xl shadow-2xl border border-white/20">
+                        <div className="bg-white/10 backdrop-blur-lg p-8 mb-25 lg:mb-0 rounded-3xl shadow-2xl border border-white/20">
                             <h3 className="text-lg font-semibold text-red-300 animate-pulse">Welcome to</h3>
                             <h1 className="text-4xl md:text-5xl font-black mt-2 text-white leading-tight">
                                 CREW CAPTIVATORS
