@@ -57,6 +57,8 @@ function Footer() {
                         <p className="mt-2 text-gray-400 mb-2">Sign up today for hints, tips and the latest service news</p>
                         <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-2">
                             <input
+                                id="email"
+                                autoComplete="email"
                                 type="email"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
