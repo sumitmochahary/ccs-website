@@ -1,13 +1,14 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router";
 function Navbar() {
 
     const [isOpen, setIsOpen] = useState(false);
     const toggleMenu = () => setIsOpen(!isOpen);
     const navItems = [
-        { name: "Home", href: "/" },
-        { name: "About", href: "/about" },
-        { name: "Contact", href: "/contact" }
+        { name: "Home", path: "/" },
+        { name: "About", path: "/about" },
+        { name: "Services", path: "/services" }
     ];
 
     return (
@@ -15,16 +16,16 @@ function Navbar() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-16">
                     {/* Brand Logo */}
-                    <a href="/" className="text-xl font-bold text-gray-800">
+                    <Link to="/" className="text-xl font-bold text-gray-800">
                         CCS
-                    </a>
+                    </Link>
                     {/* Desktop Menu */}
                     <ul className="hidden md:flex space-x-6 font-semibold">
                         {navItems.map((item) => (
                             <li key={item.name}>
-                                <a href={item.href} className="text-xl text-gray-700 hover:text-red-700 transition-colors">
+                                <Link to={item.path} className="text-xl text-gray-700 hover:text-red-700 transition-colors">
                                     {item.name}
-                                </a>
+                                </Link>
                             </li>
                         ))}
                     </ul>
@@ -42,13 +43,13 @@ function Navbar() {
                 <ul className="flex flex-col items-center space-y-4 py-4">
                     {navItems.map((item) => (
                         <li key={item.name}>
-                            <a
-                                href={item.ref}
+                            <Link
+                                to={item.path}
                                 className="text-gray-700 hover:text-blue-600 transition-colors"
                                 onClick={() => setIsOpen(false)}
                             >
                                 {item.name}
-                            </a>
+                            </Link>
                         </li>
                     ))}
                 </ul>

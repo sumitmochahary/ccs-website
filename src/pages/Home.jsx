@@ -1,4 +1,5 @@
 import { BsDot } from "react-icons/bs"
+import Services from "./Services";
 function Home() {
 
     const services = [
@@ -138,6 +139,7 @@ function Home() {
                     </div>
                 </div>
             </section>
+            <Services />
         </>
     )
 }
