@@ -1,15 +1,17 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import {
-    CheckCircle, ArrowRight, Phone, Shield, Clock,
-    Award, Users, Zap, ChevronLeft, ChevronRight,
+    ArrowRight, Phone, Shield, Clock,
+    Award, Zap, ChevronLeft, ChevronRight,
     Star, TrendingUp
 } from 'lucide-react';
+import { useNavigate } from 'react-router';
 
 const Home = () => {
     const [isVisible, setIsVisible] = useState({});
     const [currentSlide, setCurrentSlide] = useState(0);
     const [hoveredService, setHoveredService] = useState(null);
     const observerRef = useRef();
+    const navigate = useNavigate();
 
     const services = [
         "TAX AND ACCOUNTING CONSULTANT",
@@ -138,8 +140,8 @@ const Home = () => {
                         id="hero-image"
                         data-animate
                         className={`flex justify-center transition-all duration-1000 ${isVisible['hero-image']
-                                ? 'opacity-100 translate-x-0 rotate-0'
-                                : 'opacity-0 -translate-x-10 -rotate-12'
+                            ? 'opacity-100 translate-x-0 rotate-0'
+                            : 'opacity-0 -translate-x-10 -rotate-12'
                             }`}
                     >
                         <div className="relative group">
@@ -168,8 +170,8 @@ const Home = () => {
                         id="hero-content"
                         data-animate
                         className={`transition-all duration-1000 delay-300 ${isVisible['hero-content']
-                                ? 'opacity-100 translate-x-0'
-                                : 'opacity-0 translate-x-10'
+                            ? 'opacity-100 translate-x-0'
+                            : 'opacity-0 translate-x-10'
                             }`}
                     >
                         <div className="bg-white/10 backdrop-blur-lg p-8 mb-25 lg:mb-0 rounded-3xl shadow-2xl border border-white/20">
@@ -213,8 +215,8 @@ const Home = () => {
                     id="feature-cards"
                     data-animate
                     className={`max-w-6xl mx-auto px-6 transition-all duration-1000 ${isVisible['feature-cards']
-                            ? 'opacity-100 translate-y-0'
-                            : 'opacity-0 translate-y-10'
+                        ? 'opacity-100 translate-y-0'
+                        : 'opacity-0 translate-y-10'
                         }`}
                 >
                     <div className="grid md:grid-cols-3 gap-6">
@@ -257,8 +259,8 @@ const Home = () => {
                         id="about-content"
                         data-animate
                         className={`transition-all duration-1000 ${isVisible['about-content']
-                                ? 'opacity-100 translate-x-0'
-                                : 'opacity-0 -translate-x-10'
+                            ? 'opacity-100 translate-x-0'
+                            : 'opacity-0 -translate-x-10'
                             }`}
                     >
                         <div className="mb-6">
@@ -310,7 +312,8 @@ const Home = () => {
                             </div>
                         </div>
 
-                        <button className="group mt-8 px-8 py-4 bg-gradient-to-r from-gray-800 to-gray-900 text-white rounded-full hover:from-red-600 hover:to-red-700 transition-all duration-300 hover:scale-105 shadow-2xl font-bold flex items-center">
+                        <button className="group mt-8 px-8 py-4 bg-gradient-to-r from-gray-800 to-gray-900 text-white rounded-full hover:from-red-600 hover:to-red-700 transition-all duration-300 hover:scale-105 shadow-2xl font-bold flex items-center"
+                            onClick={() => navigate("/about")}>
                             Learn More
                             <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                         </button>
@@ -321,8 +324,8 @@ const Home = () => {
                         id="about-images"
                         data-animate
                         className={`space-y-8 transition-all duration-1000 delay-300 ${isVisible['about-images']
-                                ? 'opacity-100 translate-x-0'
-                                : 'opacity-0 translate-x-10'
+                            ? 'opacity-100 translate-x-0'
+                            : 'opacity-0 translate-x-10'
                             }`}
                     >
                         <div className="relative group">
@@ -379,8 +382,8 @@ const Home = () => {
                         id="services-header"
                         data-animate
                         className={`text-center mb-16 transition-all duration-1000 ${isVisible['services-header']
-                                ? 'opacity-100 translate-y-0'
-                                : 'opacity-0 translate-y-10'
+                            ? 'opacity-100 translate-y-0'
+                            : 'opacity-0 translate-y-10'
                             }`}
                     >
                         <h3 className="text-xl font-semibold text-red-600 mb-2">
@@ -417,8 +420,8 @@ const Home = () => {
                             id="services-cards"
                             data-animate
                             className={`grid grid-cols-1 md:grid-cols-3 gap-8 px-16 transition-all duration-1000 ${isVisible['services-cards']
-                                    ? 'opacity-100 translate-y-0'
-                                    : 'opacity-0 translate-y-10'
+                                ? 'opacity-100 translate-y-0'
+                                : 'opacity-0 translate-y-10'
                                 }`}
                         >
                             {featuredServices.slice(currentSlide * 3, currentSlide * 3 + 3).map((service, index) => (
@@ -472,8 +475,8 @@ const Home = () => {
                                     key={index}
                                     onClick={() => setCurrentSlide(index)}
                                     className={`w-3 h-3 rounded-full transition-all duration-300 ${currentSlide === index
-                                            ? 'bg-gradient-to-r from-red-500 to-pink-500 scale-125'
-                                            : 'bg-gray-300 hover:bg-gray-400'
+                                        ? 'bg-gradient-to-r from-red-500 to-pink-500 scale-125'
+                                        : 'bg-gray-300 hover:bg-gray-400'
                                         }`}
                                 />
                             ))}
@@ -481,7 +484,8 @@ const Home = () => {
 
                         {/* View More Button */}
                         <div className="text-center mt-12">
-                            <button className="group px-10 py-4 bg-gradient-to-r from-gray-800 to-gray-900 text-white rounded-full hover:from-red-600 hover:to-red-700 transition-all duration-300 hover:scale-105 shadow-2xl font-bold flex items-center mx-auto">
+                            <button className="group px-10 py-4 bg-gradient-to-r from-gray-800 to-gray-900 text-white rounded-full hover:from-red-600 hover:to-red-700 transition-all duration-300 hover:scale-105 shadow-2xl font-bold flex items-center mx-auto"
+                                onClick={() => navigate("/services")}>
                                 View All Services
                                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                             </button>
@@ -513,8 +517,8 @@ const Home = () => {
                     id="home-cta"
                     data-animate
                     className={`relative z-10 text-center px-6 max-w-4xl mx-auto transition-all duration-1000 ${isVisible['home-cta']
-                            ? 'opacity-100 translate-y-0'
-                            : 'opacity-0 translate-y-10'
+                        ? 'opacity-100 translate-y-0'
+                        : 'opacity-0 translate-y-10'
                         }`}
                 >
                     <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
