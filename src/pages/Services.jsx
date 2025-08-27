@@ -397,9 +397,6 @@ const Services = () => {
                                         {/* Hover effect overlay */}
                                         <div className={`absolute inset-0 bg-gradient-to-r ${service.gradient} rounded-3xl opacity-0 group-hover:opacity-5 transition-opacity duration-500`}></div>
                                     </div>
-
-                                    {/* Floating decoration */}
-                                    <div className={`absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-r ${service.gradient} rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 animate-bounce`}></div>
                                 </div>
                             );
                         })}
