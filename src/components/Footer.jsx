@@ -49,7 +49,7 @@ function Footer() {
 
                     {/* Newsletter */}
                     <div className="md:w-1/3 text-center md:text-left md:mr-10">
-                        <h3 className="text-lg font-semibold mb-3">News Letter</h3>
+                        <h3 className="text-lg font-semibold">News Letter</h3>
                         <p className="mt-2 text-gray-400 mb-2">Sign up today for hints, tips and the latest service news</p>
                         <p className="mt-2 text-gray-400 mb-2">Talk To Our Support & Mail Us</p>
                         <p className="mt-2 text-gray-400 mb-2">+91-9XXXXXXXXX8</p>
@@ -66,7 +66,7 @@ function Footer() {
                             />
                             <button
                                 type="submit"
-                                className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-md transition-colors"
+                                className="px-4 py-2 bg-red-600 hover:bg-red-700 rounded-md transition-colors"
                             >
                                 Subscribe
                             </button>

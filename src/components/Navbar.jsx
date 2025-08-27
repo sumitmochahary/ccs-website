@@ -22,14 +22,14 @@ function Navbar() {
                     <ul className="hidden md:flex space-x-6 font-semibold">
                         {navItems.map((item) => (
                             <li key={item.name}>
-                                <a href={item.href} className="text-xl text-gray-700 hover:text-blue-600 transition-colors">
+                                <a href={item.href} className="text-xl text-gray-700 hover:text-red-700 transition-colors">
                                     {item.name}
                                 </a>
                             </li>
                         ))}
                     </ul>
                     {/* Mobile Menu Button */}
-                    <button onClick={toggleMenu} className="md:hidden text-gray-700 hover:text-blue-600 focus:outline-none">
+                    <button onClick={toggleMenu} className="md:hidden text-gray-700 hover:text-red-700 focus:outline-none">
                         {isOpen ? <X size={30} /> : <Menu size={30} />}
                     </button>
                 </div>
