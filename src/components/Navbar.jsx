@@ -19,7 +19,7 @@ function Navbar() {
                         CCS
                     </a>
                     {/* Desktop Menu */}
-                    <ul className="hidden md:flex space-x-6">
+                    <ul className="hidden md:flex space-x-6 font-semibold">
                         {navItems.map((item) => (
                             <li key={item.name}>
                                 <a href={item.href} className="text-xl text-gray-700 hover:text-blue-600 transition-colors">
